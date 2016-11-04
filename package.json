@@ -25,6 +25,6 @@
   },
   "dependencies": {
     "canvg": "git+http://git@github.com/Jephuff/canvg.git",
-    "save-svg-as-png": "git+ssh://git@github.com/Jephuff/saveSvgAsPng.git#gh-pages"
+    "save-svg-as-png": "git+http://git@github.com/Jephuff/saveSvgAsPng.git#gh-pages"
   }
 }

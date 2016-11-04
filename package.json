@@ -1,0 +1,30 @@
+{
+  "name": "download-svg",
+  "version": "0.0.1",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepublish": "babel src --out-dir dist --presets stage-0,es2015"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jephuff/download-svg.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jephuff/download-svg/issues"
+  },
+  "homepage": "https://github.com/Jephuff/download-svg#readme",
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-0": "^6.16.0"
+  },
+  "dependencies": {
+    "canvg": "git+http://git@github.com/canvg/canvg.git",
+    "save-svg-as-png": "git+ssh://git@github.com/Jephuff/saveSvgAsPng.git#gh-pages"
+  }
+}

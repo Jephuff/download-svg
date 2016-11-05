@@ -24,7 +24,7 @@
     "babel-preset-stage-0": "^6.16.0"
   },
   "dependencies": {
-    "canvg": "git+http://git@github.com/Jephuff/canvg.git",
+    "@jephuff/canvg": "1.0.0",
     "save-svg-as-png": "git+http://git@github.com/Jephuff/saveSvgAsPng.git#gh-pages"
   }
 }

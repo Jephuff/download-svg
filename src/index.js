@@ -1,5 +1,5 @@
 import saveSvgAsPng from 'save-svg-as-png';
-import canvg from 'canvg';
+import canvg from '@jephuff/canvg';
 
 const fontRegEx = /(font-size: ?)(([0-9]*(\.[0-9]+))?([^;]*))/;
 

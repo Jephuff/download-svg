@@ -12,7 +12,7 @@ const defaultConfig = {
   },
 };
 
-function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace }) {
+function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace, useCanvg }) {
   const selectorRemap = stylePrefix ? s => s.replace(stylePrefix, '').replace(/^ /, '') : undefined;
   const extension = (fileName.match(/\.[^.]*$/) || [])[0];
 
@@ -40,7 +40,7 @@ function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace
       ...defaultConfig,
       selectorRemap,
       scale: 2,
-      canvg,
+      canvg: useCanvg && canvg,
       encoderType,
       modifyFontFace,
     });

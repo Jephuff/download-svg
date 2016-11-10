@@ -20,7 +20,7 @@ function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace
     saveSvgAsPng.svgAsDataUri(svg, {
       ...defaultConfig,
       selectorRemap,
-    }, uri => saveSvgAsPng.download(uri, fileName));
+    }, uri => saveSvgAsPng.download(fileName, uri));
   } else {
     let encoderType;
     switch (extension) {

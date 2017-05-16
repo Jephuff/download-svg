@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@jephuff/canvg": "1.0.0",
+    "base64toblob": "0.0.1",
     "save-svg-as-png": "git+http://git@github.com/Jephuff/saveSvgAsPng.git#gh-pages"
   }
 }

@@ -1,5 +1,6 @@
 import saveSvgAsPng from 'save-svg-as-png';
 import canvg from '@jephuff/canvg';
+import base64toblob from 'base64toblob';
 
 const fontRegEx = /(font-size: ?)(([0-9]*(\.[0-9]+))?([^;]*))/;
 
@@ -12,6 +13,16 @@ const defaultConfig = {
   },
 };
 
+function downloadSvgUri(fileName, uri) {
+  if (uri.length <= 2000) return saveSvgAsPng.download(fileName, uri);
+
+  const contentType = 'image/svg+xml';
+  const data = uri.replace('data:image/svg+xml;base64,', '');
+  const blob = base64toblob(data, contentType);
+  const blobUrl = URL.createObjectURL(blob);
+  return saveSvgAsPng.download(fileName, blobUrl);
+}
+
 function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace, useCanvg }) {
   const selectorRemap = stylePrefix ? s => s.replace(stylePrefix, '').replace(/^ /, '') : undefined;
   const extension = (fileName.match(/\.[^.]*$/) || [])[0];
@@ -20,7 +31,7 @@ function downloadSvg({ svg, stylePrefix, fileName = 'export.svg', modifyFontFace
     saveSvgAsPng.svgAsDataUri(svg, {
       ...defaultConfig,
       selectorRemap,
-    }, uri => saveSvgAsPng.download(fileName, uri));
+    }, uri => downloadSvgUri(fileName, uri));
   } else {
     let encoderType;
     switch (extension) {

@@ -25,7 +25,6 @@
   },
   "dependencies": {
     "@jephuff/canvg": "1.0.0",
-    "base64toblob": "0.0.1",
     "save-svg-as-png": "1.2.0"
   }
 }

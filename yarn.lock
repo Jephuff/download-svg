@@ -723,10 +723,6 @@ balanced-match@^0.4.1:
   version "0.4.2"
   resolved "https://registry.yarnpkg.com/balanced-match/-/balanced-match-0.4.2.tgz#cb3f3e3c732dc0f01ee70b403f302e61d7709838"
 
-base64toblob@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/base64toblob/-/base64toblob-0.0.1.tgz#c4fd4d575487594af3eff5f6e37b8fbc29e6ef79"
-
 bcrypt-pbkdf@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/bcrypt-pbkdf/-/bcrypt-pbkdf-1.0.0.tgz#3ca76b85241c7170bf7d9703e7b9aa74630040d4"
